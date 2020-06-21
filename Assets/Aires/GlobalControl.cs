@@ -6,7 +6,7 @@ using UnityEngine;
 public class GlobalControl : MonoBehaviour
 {
     public Collider2D Sun;
-    public Ship Player;
+    public Ship ship;
 
     // public float AngDampen;
     // public float AngSpdConstant;
@@ -18,7 +18,7 @@ public class GlobalControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Player.angularSpeed -= AngDampen;
         // if( Input.GetKey(KeyCode.LeftArrow) ) {
@@ -39,11 +39,12 @@ public class GlobalControl : MonoBehaviour
         //     Player.angularSpeed = 0;
 
         if( Input.GetKey(KeyCode.LeftArrow) )
-            Player.angularSpeed = Player.AngSpdConstant;
+            ship.Left();
         else if( Input.GetKey(KeyCode.RightArrow) )
-            Player.angularSpeed = -Player.AngSpdConstant;
-        else
-            Player.angularSpeed = 0;
+            ship.Right();
+
+        if( Input.GetKey(KeyCode.UpArrow) )
+            ship.Forward();
 
 
     }
