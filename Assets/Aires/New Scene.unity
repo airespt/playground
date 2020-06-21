@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 582234139}
   - component: {fileID: 582234138}
   m_Layer: 5
-  m_Name: Player
+  m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -394,7 +394,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582234136}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0}
   m_Children: []
@@ -480,7 +480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 0, y: 0}
-  AngSpdConstant: 2
+  accelConstant: 0.01
+  angSpdConstant: 2
   angularSpeed: 0
 --- !u!1 &620229726
 GameObject:
@@ -794,7 +795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sun: {fileID: 561342270}
-  Player: {fileID: 582234140}
+  ship: {fileID: 582234140}
 --- !u!1 &1278760678
 GameObject:
   m_ObjectHideFlags: 0
